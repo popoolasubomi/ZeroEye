@@ -7,7 +7,7 @@ target 'ZeroEye' do
 
   # Pods for ZeroEye
     pod 'Parse'
-
+    pod 'MessageInputBar'
   target 'ZeroEyeTests' do
     inherit! :search_paths
     # Pods for testing

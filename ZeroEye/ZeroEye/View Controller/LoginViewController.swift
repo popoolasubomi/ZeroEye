@@ -35,4 +35,7 @@ class LoginViewController: UIViewController {
         loginUser()
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        self.view.endEditing(true)
+    }
 }

@@ -7,14 +7,17 @@
 
 import UIKit
 import Parse
+import MessageInputBar
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
    
     
     @IBOutlet weak var encryptSwitch: UISwitch!
     @IBOutlet weak var tableView: UITableView!
     
     var messages = [PFObject]()
+    var messageBar = MessageInputBar()
+    var showMessageBar = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +30,35 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                              selector: #selector(self.populateTable),
                              userInfo: nil,
                              repeats: true)
+        
+        self.messageBar.inputTextView.placeholder = "iMessage"
+        self.messageBar.sendButton.title = "Send"
+        self.messageBar.delegate = self
+        
+        self.tableView.keyboardDismissMode = .interactive
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+    @objc func keyboardWillBeHidden(note: Notification){
+             messageBar.inputTextView.text = nil
+             showMessageBar = true
+             becomeFirstResponder()
+        }
+    
+    override var inputAccessoryView: UIView?{
+           return messageBar
+       }
+       
+    override var canBecomeFirstResponder: Bool{
+       return showMessageBar
+      }
+    
     @objc func populateTable() {
         let query = PFQuery(className:"Chats")
         query.includeKey("author")
-        query.order(byDescending: "createdAt")
+        query.order(byAscending: "createdAt")
         query.findObjectsInBackground { (objects, error) in
             if (error == nil) {
                 self.messages = objects!
@@ -53,11 +79,30 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.setChatCell(message: self.messages[indexPath.row])
         return cell
     }
+        
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        let chat = PFObject(className: "Chats")
+        chat["Chats"] = text
+        chat["author"] = PFUser.current()!
+        chat.saveInBackground { (success, error) in
+            if (error == nil) {
+                self.messageBar.inputTextView.text = nil
+                self.populateTable()
+            } else {
+                print("Couldn't send message!")
+            }
+        }
+        
+    }
     
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOutInBackground { (error) in
             if (error == nil) {
-                self.dismiss(animated: true, completion: nil)
+                print("Successful logout")
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = main.instantiateViewController(identifier: "loginViewController")
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.window?.rootViewController = loginViewController
             } else {
                 print("Failed to Logout")
             }

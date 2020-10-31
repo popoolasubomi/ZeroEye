@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		83DA1C42254DA37B00608D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C41254DA37B00608D3D /* AppDelegate.swift */; };
 		83DA1C44254DA37B00608D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C43254DA37B00608D3D /* SceneDelegate.swift */; };
-		83DA1C46254DA37B00608D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C45254DA37B00608D3D /* ViewController.swift */; };
 		83DA1C49254DA37B00608D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DA1C47254DA37B00608D3D /* Main.storyboard */; };
 		83DA1C4B254DA38200608D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83DA1C4A254DA38200608D3D /* Assets.xcassets */; };
 		83DA1C4E254DA38200608D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DA1C4C254DA38200608D3D /* LaunchScreen.storyboard */; };
@@ -38,7 +37,6 @@
 		83DA1C3E254DA37B00608D3D /* ZeroEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA1C41254DA37B00608D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DA1C43254DA37B00608D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83DA1C45254DA37B00608D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83DA1C48254DA37B00608D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83DA1C4A254DA38200608D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83DA1C4D254DA38200608D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,9 +97,11 @@
 		83DA1C40254DA37B00608D3D /* ZeroEye */ = {
 			isa = PBXGroup;
 			children = (
+				83DA1C76254DA47800608D3D /* Models */,
+				83DA1C75254DA46E00608D3D /* Views */,
+				83DA1C74254DA46300608D3D /* View Controllers */,
 				83DA1C41254DA37B00608D3D /* AppDelegate.swift */,
 				83DA1C43254DA37B00608D3D /* SceneDelegate.swift */,
-				83DA1C45254DA37B00608D3D /* ViewController.swift */,
 				83DA1C47254DA37B00608D3D /* Main.storyboard */,
 				83DA1C4A254DA38200608D3D /* Assets.xcassets */,
 				83DA1C4C254DA38200608D3D /* LaunchScreen.storyboard */,
@@ -126,6 +126,27 @@
 				83DA1C65254DA38400608D3D /* Info.plist */,
 			);
 			path = ZeroEyeUITests;
+			sourceTree = "<group>";
+		};
+		83DA1C74254DA46300608D3D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		83DA1C75254DA46E00608D3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83DA1C76254DA47800608D3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DA1C46254DA37B00608D3D /* ViewController.swift in Sources */,
 				83DA1C42254DA37B00608D3D /* AppDelegate.swift in Sources */,
 				83DA1C44254DA37B00608D3D /* SceneDelegate.swift in Sources */,
 			);

@@ -15,6 +15,7 @@
 		83DA1C59254DA38300608D3D /* ZeroEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C58254DA38300608D3D /* ZeroEyeTests.swift */; };
 		83DA1C64254DA38400608D3D /* ZeroEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C63254DA38400608D3D /* ZeroEyeUITests.swift */; };
 		83DA1C7B254DA4D100608D3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C7A254DA4D100608D3D /* ChatViewController.swift */; };
+		83DA1C80254DAC6F00608D3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C7F254DAC6F00608D3D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		83DA1C63254DA38400608D3D /* ZeroEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroEyeUITests.swift; sourceTree = "<group>"; };
 		83DA1C65254DA38400608D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA1C7A254DA4D100608D3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		83DA1C7F254DAC6F00608D3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				83DA1C7A254DA4D100608D3D /* ChatViewController.swift */,
+				83DA1C7F254DAC6F00608D3D /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DA1C80254DAC6F00608D3D /* LoginViewController.swift in Sources */,
 				83DA1C42254DA37B00608D3D /* AppDelegate.swift in Sources */,
 				83DA1C7B254DA4D100608D3D /* ChatViewController.swift in Sources */,
 				83DA1C44254DA37B00608D3D /* SceneDelegate.swift in Sources */,

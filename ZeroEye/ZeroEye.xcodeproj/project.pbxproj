@@ -18,6 +18,7 @@
 		83DA1CCE254DD0F600608D3D /* ZeroEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1CCD254DD0F600608D3D /* ZeroEyeUITests.swift */; };
 		83DA1CF9254DD68400608D3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1CF8254DD68300608D3D /* LoginViewController.swift */; };
 		83DA1CFE254DD6DC00608D3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1CFD254DD6DC00608D3D /* ChatViewController.swift */; };
+		83DA1D03254DEEA800608D3D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1D02254DEEA800608D3D /* ChatCell.swift */; };
 		C8A93919B9D8BD30EE3E5993 /* Pods_ZeroEye_ZeroEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60270DA4CDB9612B34B8F982 /* Pods_ZeroEye_ZeroEyeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		83DA1CCF254DD0F600608D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA1CF8254DD68300608D3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83DA1CFD254DD6DC00608D3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		83DA1D02254DEEA800608D3D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		E47F9A2D702FCE9CE9CB623C /* Pods-ZeroEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye.debug.xcconfig"; path = "Target Support Files/Pods-ZeroEye/Pods-ZeroEye.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 		83DA1CE2254DD12200608D3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83DA1D02254DEEA800608D3D /* ChatCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				83DA1CF9254DD68400608D3D /* LoginViewController.swift in Sources */,
 				83DA1CAC254DD0EF00608D3D /* AppDelegate.swift in Sources */,
 				83DA1CFE254DD6DC00608D3D /* ChatViewController.swift in Sources */,
+				83DA1D03254DEEA800608D3D /* ChatCell.swift in Sources */,
 				83DA1CAE254DD0EF00608D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="AWn-zb-5rh">
             <objects>
-                <viewController id="WYs-Ue-i9W" sceneMemberID="viewController">
+                <viewController id="WYs-Ue-i9W" customClass="LoginViewController" customModule="ZeroEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCV-Tr-TAS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

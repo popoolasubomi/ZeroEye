@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21132DCA4B771CBDD5FB29DB /* Pods_ZeroEye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAE233169B925D7AE8D74EC /* Pods_ZeroEye.framework */; };
+		39FC4E38B13B1B514781C45A /* Pods_ZeroEye_ZeroEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DC914FAE494D6F14DF3DA0 /* Pods_ZeroEye_ZeroEyeUITests.framework */; };
 		83DA1C42254DA37B00608D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C41254DA37B00608D3D /* AppDelegate.swift */; };
 		83DA1C44254DA37B00608D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C43254DA37B00608D3D /* SceneDelegate.swift */; };
 		83DA1C49254DA37B00608D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DA1C47254DA37B00608D3D /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		83DA1C64254DA38400608D3D /* ZeroEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C63254DA38400608D3D /* ZeroEyeUITests.swift */; };
 		83DA1C7B254DA4D100608D3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C7A254DA4D100608D3D /* ChatViewController.swift */; };
 		83DA1C80254DAC6F00608D3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1C7F254DAC6F00608D3D /* LoginViewController.swift */; };
+		BFADABD0781E8A140192BDEE /* Pods_ZeroEyeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3C73960EF3E7CF13FCCA9D /* Pods_ZeroEyeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039C1747ED2CAFE0B0CBB21B /* Pods-ZeroEyeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEyeTests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroEyeTests/Pods-ZeroEyeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A52F2AA0133C63F5205825A /* Pods-ZeroEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye.release.xcconfig"; path = "Target Support Files/Pods-ZeroEye/Pods-ZeroEye.release.xcconfig"; sourceTree = "<group>"; };
+		3B3C73960EF3E7CF13FCCA9D /* Pods_ZeroEyeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroEyeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40DC914FAE494D6F14DF3DA0 /* Pods_ZeroEye_ZeroEyeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroEye_ZeroEyeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CC05D460C0868D6D19BBE3 /* Pods-ZeroEyeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEyeTests.release.xcconfig"; path = "Target Support Files/Pods-ZeroEyeTests/Pods-ZeroEyeTests.release.xcconfig"; sourceTree = "<group>"; };
+		61A6076CE0F2757D33569D6A /* Pods-ZeroEye-ZeroEyeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye-ZeroEyeUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroEye-ZeroEyeUITests/Pods-ZeroEye-ZeroEyeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83DA1C3E254DA37B00608D3D /* ZeroEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA1C41254DA37B00608D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DA1C43254DA37B00608D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,9 @@
 		83DA1C65254DA38400608D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA1C7A254DA4D100608D3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		83DA1C7F254DAC6F00608D3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8D915AE6596753A3B99CD8C9 /* Pods-ZeroEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye.debug.xcconfig"; path = "Target Support Files/Pods-ZeroEye/Pods-ZeroEye.debug.xcconfig"; sourceTree = "<group>"; };
+		8EAE233169B925D7AE8D74EC /* Pods_ZeroEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66B20DCF2F5BE11165D92C6 /* Pods-ZeroEye-ZeroEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye-ZeroEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroEye-ZeroEyeUITests/Pods-ZeroEye-ZeroEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21132DCA4B771CBDD5FB29DB /* Pods_ZeroEye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFADABD0781E8A140192BDEE /* Pods_ZeroEyeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39FC4E38B13B1B514781C45A /* Pods_ZeroEye_ZeroEyeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32D247748DE2F4FC308C6F2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EAE233169B925D7AE8D74EC /* Pods_ZeroEye.framework */,
+				40DC914FAE494D6F14DF3DA0 /* Pods_ZeroEye_ZeroEyeUITests.framework */,
+				3B3C73960EF3E7CF13FCCA9D /* Pods_ZeroEyeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BE6BAC63BC87CACC6CD8F01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D915AE6596753A3B99CD8C9 /* Pods-ZeroEye.debug.xcconfig */,
+				3A52F2AA0133C63F5205825A /* Pods-ZeroEye.release.xcconfig */,
+				61A6076CE0F2757D33569D6A /* Pods-ZeroEye-ZeroEyeUITests.debug.xcconfig */,
+				C66B20DCF2F5BE11165D92C6 /* Pods-ZeroEye-ZeroEyeUITests.release.xcconfig */,
+				039C1747ED2CAFE0B0CBB21B /* Pods-ZeroEyeTests.debug.xcconfig */,
+				60CC05D460C0868D6D19BBE3 /* Pods-ZeroEyeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		83DA1C35254DA37B00608D3D = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +124,8 @@
 				83DA1C57254DA38300608D3D /* ZeroEyeTests */,
 				83DA1C62254DA38400608D3D /* ZeroEyeUITests */,
 				83DA1C3F254DA37B00608D3D /* Products */,
+				4BE6BAC63BC87CACC6CD8F01 /* Pods */,
+				32D247748DE2F4FC308C6F2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83DA1C68254DA38400608D3D /* Build configuration list for PBXNativeTarget "ZeroEye" */;
 			buildPhases = (
+				A9EDB9392C58CA60D542EDB9 /* [CP] Check Pods Manifest.lock */,
 				83DA1C3A254DA37B00608D3D /* Sources */,
 				83DA1C3B254DA37B00608D3D /* Frameworks */,
 				83DA1C3C254DA37B00608D3D /* Resources */,
+				D5918995E2FF92B1589C0F76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83DA1C6B254DA38400608D3D /* Build configuration list for PBXNativeTarget "ZeroEyeTests" */;
 			buildPhases = (
+				BA9E659CE52ED59D8D06A138 /* [CP] Check Pods Manifest.lock */,
 				83DA1C50254DA38300608D3D /* Sources */,
 				83DA1C51254DA38300608D3D /* Frameworks */,
 				83DA1C52254DA38300608D3D /* Resources */,
@@ -197,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83DA1C6E254DA38400608D3D /* Build configuration list for PBXNativeTarget "ZeroEyeUITests" */;
 			buildPhases = (
+				44C0EBF051E4A321B9561BFB /* [CP] Check Pods Manifest.lock */,
 				83DA1C5B254DA38400608D3D /* Sources */,
 				83DA1C5C254DA38400608D3D /* Frameworks */,
 				83DA1C5D254DA38400608D3D /* Resources */,
+				BB13F6798C0AB4D4A59C199E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +325,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44C0EBF051E4A321B9561BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroEye-ZeroEyeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EDB9392C58CA60D542EDB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroEye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA9E659CE52ED59D8D06A138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroEyeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB13F6798C0AB4D4A59C199E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroEye-ZeroEyeUITests/Pods-ZeroEye-ZeroEyeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroEye-ZeroEyeUITests/Pods-ZeroEye-ZeroEyeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroEye-ZeroEyeUITests/Pods-ZeroEye-ZeroEyeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5918995E2FF92B1589C0F76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroEye/Pods-ZeroEye-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroEye/Pods-ZeroEye-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroEye/Pods-ZeroEye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83DA1C3A254DA37B00608D3D /* Sources */ = {
@@ -461,6 +610,7 @@
 		};
 		83DA1C69254DA38400608D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D915AE6596753A3B99CD8C9 /* Pods-ZeroEye.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +630,7 @@
 		};
 		83DA1C6A254DA38400608D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A52F2AA0133C63F5205825A /* Pods-ZeroEye.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +650,7 @@
 		};
 		83DA1C6C254DA38400608D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039C1747ED2CAFE0B0CBB21B /* Pods-ZeroEyeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +673,7 @@
 		};
 		83DA1C6D254DA38400608D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CC05D460C0868D6D19BBE3 /* Pods-ZeroEyeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +696,7 @@
 		};
 		83DA1C6F254DA38400608D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A6076CE0F2757D33569D6A /* Pods-ZeroEye-ZeroEyeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +717,7 @@
 		};
 		83DA1C70254DA38400608D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66B20DCF2F5BE11165D92C6 /* Pods-ZeroEye-ZeroEyeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_ZeroEye {
+  umbrella header "Pods-ZeroEye-umbrella.h"
+
+  export *
+  module * { export * }
+}

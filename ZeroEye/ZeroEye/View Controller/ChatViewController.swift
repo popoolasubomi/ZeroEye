@@ -9,7 +9,7 @@ import UIKit
 import Parse
 import MessageInputBar
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate, SpeechDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate, SpeechDelegate, ImposterDelegate, ViewImposterDelegate {
    
     @IBOutlet weak var encryptSwitch: UISwitch!
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +17,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var messages = [PFObject]()
     var messageBar = MessageInputBar()
     var showMessageBar = true
+    var isImposterDetected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +78,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
         cell.isEncrypted = self.encryptSwitch.isOn
+        cell.isDetected = isImposterDetected
         cell.speechDelegate = self
+        cell.imposterDelegate = self
+        cell.viewImposterDelegate = self
         cell.setChatCell(message: self.messages[indexPath.row])
         return cell
     }
@@ -102,6 +106,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("Speaking...")
         let speechModel = SpeechOutput()
         speechModel.say(text: didTap)
+    }
+    
+    func oneTapped(cell: ChatCell) {
+        isImposterDetected = isImposterDetected == true ? false : true
+    }
+    
+    func viewImposterNow(cell: ChatCell) {
+        self.performSegue(withIdentifier: "imposterSegue", sender: nil)
     }
     
     @IBAction func switchMoved(_ sender: Any) {

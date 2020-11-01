@@ -19,19 +19,40 @@ class ChatCell: UITableViewCell {
     @IBOutlet weak var authorChatLabel: UILabel!
     
     var isEncrypted: Bool?
+    var isDetected: Bool?
     var speechDelegate: SpeechDelegate?
+    var imposterDelegate: ImposterDelegate?
+    var viewImposterDelegate: ViewImposterDelegate?
     var chat: [String]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let bubbleTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
-        self.bubbleView.addGestureRecognizer(bubbleTap)
+        let bubbleLongTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
+        self.bubbleView.addGestureRecognizer(bubbleLongTap)
         self.bubbleView.isUserInteractionEnabled = true
         
-        let authorTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
-        self.authorBubbleView.addGestureRecognizer(authorTap)
+        let authorLongTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
+        self.authorBubbleView.addGestureRecognizer(authorLongTap)
         self.authorBubbleView.isUserInteractionEnabled = true
+        
+        let bubbleOneTap = UITapGestureRecognizer.init(target: self, action: #selector(oneTap(sender:)))
+        self.bubbleView.addGestureRecognizer(bubbleOneTap)
+        self.bubbleView.isUserInteractionEnabled = true
+        
+        let authorBubbleOneTap = UITapGestureRecognizer.init(target: self, action: #selector(oneTap(sender:)))
+        self.authorBubbleView.addGestureRecognizer(authorBubbleOneTap)
+        self.authorBubbleView.isUserInteractionEnabled = true
+        
+        let bubbleSwipe = UISwipeGestureRecognizer.init(target: self, action: #selector(onSwipe(sender:)))
+        bubbleSwipe.direction = .left
+        self.contentView.addGestureRecognizer(bubbleSwipe)
+        self.contentView.isUserInteractionEnabled = true
+        
+//        let authorSwipe = UISwipeGestureRecognizer.init(target: self, action: #selector(onSwipe(sender:)))
+//        authorSwipe.direction = .left
+//        self.authorBubbleView.addGestureRecognizer(bubbleSwipe)
+//        self.authorBubbleView.isUserInteractionEnabled = true
         
     }
 
@@ -46,6 +67,14 @@ class ChatCell: UITableViewCell {
         speechDelegate?.viewPressed(cell: self, didTap: textData)
     }
     
+    @objc func oneTap(sender: UITapGestureRecognizer) {
+        imposterDelegate?.oneTapped(cell: self)
+    }
+    
+    @objc func onSwipe(sender: UISwipeGestureRecognizer) {
+        viewImposterDelegate?.viewImposterNow(cell: self)
+    }
+    
     func setChatCell(message: PFObject) {
         self.bubbleView.layer.cornerRadius = 16
         self.bubbleView.clipsToBounds = true
@@ -56,6 +85,14 @@ class ChatCell: UITableViewCell {
         self.chat = message["Chats"] as? [String]
         
         let composer = message["author"] as! PFUser
+        
+        if (isDetected!) {
+            self.bubbleView.backgroundColor = .orange
+            self.authorBubbleView.backgroundColor = .orange
+        } else{
+            self.bubbleView.backgroundColor = .blue
+            self.authorBubbleView.backgroundColor = .blue
+        }
         
         if (PFUser.current()?.username == composer.username) {
             self.usernameLabel.alpha = 0
@@ -98,4 +135,12 @@ class ChatCell: UITableViewCell {
 
 protocol SpeechDelegate {
     func viewPressed(cell: ChatCell, didTap: String)
+}
+
+protocol ImposterDelegate {
+    func oneTapped(cell: ChatCell)
+}
+
+protocol ViewImposterDelegate {
+    func viewImposterNow(cell: ChatCell)
 }

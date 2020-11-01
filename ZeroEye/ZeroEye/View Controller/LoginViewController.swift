@@ -36,14 +36,14 @@ class LoginViewController: UIViewController {
         let viewFrame = self.view.frame
         
         self.chatLabel.frame.origin.x = (viewFrame.size.width - self.chatLabel.frame.size.width) / 2
-        self.chatLabel.frame.origin.y = (viewFrame.size.height * 0.25)
+        self.chatLabel.frame.origin.y = (viewFrame.size.height * 0.15)
         
         self.usernameField.frame.origin.x = 35
-        self.usernameField.frame.origin.y = viewFrame.size.height * 0.50
+        self.usernameField.frame.origin.y = viewFrame.size.height * 0.35
         self.usernameField.frame.size.width = viewFrame.size.width - 70
         
         self.passwordField.frame.origin.x = 35
-        self.passwordField.frame.origin.y = viewFrame.size.height * 0.70
+        self.passwordField.frame.origin.y = viewFrame.size.height * 0.60
         self.passwordField.frame.size.width = viewFrame.size.width - 70
         
         self.loginButton.frame.origin.x = (viewFrame.size.width - self.loginButton.frame.size.width) / 2

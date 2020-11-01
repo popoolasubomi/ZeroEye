@@ -217,11 +217,46 @@
                     <connections>
                         <outlet property="encryptSwitch" destination="vX4-YE-D2r" id="LB7-SK-Aog"/>
                         <outlet property="tableView" destination="at7-e5-eEe" id="MeW-Js-ins"/>
+                        <segue destination="tey-KK-3SI" kind="presentation" identifier="imposterSegue" modalPresentationStyle="fullScreen" id="r3v-sf-StZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgB-w5-uGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="93.75"/>
+        </scene>
+        <!--Imposter Detection-->
+        <scene sceneID="2d2-5E-kd2">
+            <objects>
+                <viewController id="tey-KK-3SI" customClass="ImposterDetection" customModule="ZeroEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8eN-Af-abz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-hh-dHC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Ue-5f-BKq" appends="YES" id="yWv-Jg-6YB"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qDh-R2-hNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="sfG-hh-dHC" id="eGD-fE-9X6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRW-6f-39m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="0Ue-5f-BKq">
+                    <connections>
+                        <action selector="onSwipe:" destination="tey-KK-3SI" id="ek4-5H-dC9"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lrb-Kd-S0Z">

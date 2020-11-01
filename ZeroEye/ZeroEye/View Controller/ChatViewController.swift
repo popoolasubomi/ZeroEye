@@ -25,6 +25,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        populateTable()
+        
         Timer.scheduledTimer(timeInterval: 3,
                              target: self,
                              selector: #selector(self.populateTable),
@@ -82,7 +84,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         let chat = PFObject(className: "Chats")
-        chat["Chats"] = text
+        let encryptedTexts = Cryptograph.sharedInstance.encryptText(text: text)
+        chat["Chats"] = encryptedTexts
         chat["author"] = PFUser.current()!
         chat.saveInBackground { (success, error) in
             if (error == nil) {
@@ -93,6 +96,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
+    }
+    
+    @IBAction func switchMoved(_ sender: Any) {
+        populateTable()
     }
     
     @IBAction func onLogout(_ sender: Any) {

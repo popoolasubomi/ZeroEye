@@ -46,18 +46,31 @@ class ChatCell: UITableViewCell {
             self.bubbleView.alpha = 0
             
             self.authorNameLabel.text = composer.username
-            self.authorChatLabel.text = message["Chats"] as? String
             
+            let chatData = message["Chats"] as? [String]
+            if (self.isEncrypted!) {
+                self.authorChatLabel.text = Cryptograph.sharedInstance.joinStrings(text: chatData!)
+            } else {
+                self.authorChatLabel.text = Cryptograph.sharedInstance.decryptText(text: chatData!)
+            }
+           
             self.authorBubbleView.alpha = 1
             self.authorNameLabel.alpha = 1
             self.authorChatLabel.alpha = 1
+            
         } else {
             self.usernameLabel.alpha = 1
             self.chatLabel.alpha = 1
             self.bubbleView.alpha = 1
             
             self.usernameLabel.text = composer.username
-            self.chatLabel.text = message["Chats"] as? String
+            
+            let chatData = message["Chats"] as? [String]
+            if (self.isEncrypted!) {
+                self.chatLabel.text = Cryptograph.sharedInstance.joinStrings(text: chatData!)
+            } else {
+                self.chatLabel.text = Cryptograph.sharedInstance.decryptText(text: chatData!)
+            }
             
             self.authorBubbleView.alpha = 0
             self.authorNameLabel.alpha = 0

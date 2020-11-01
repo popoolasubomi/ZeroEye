@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3FDBE060FDDA1F1ED26F237C /* Pods_ZeroEye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5B3E25359E353CDD3F9742 /* Pods_ZeroEye.framework */; };
 		76AF6E6590825E31731E648D /* Pods_ZeroEyeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8299F75A0B08F0FC98D5DF78 /* Pods_ZeroEyeTests.framework */; };
+		83B8D8BF254E457500CF76BA /* Cryptograph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D8BE254E457400CF76BA /* Cryptograph.swift */; };
+		83B8D8C4254E590C00CF76BA /* SpeechOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D8C3254E590C00CF76BA /* SpeechOutput.swift */; };
 		83DA1CAC254DD0EF00608D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1CAB254DD0EF00608D3D /* AppDelegate.swift */; };
 		83DA1CAE254DD0EF00608D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1CAD254DD0EF00608D3D /* SceneDelegate.swift */; };
 		83DA1CB3254DD0EF00608D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DA1CB1254DD0EF00608D3D /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		6C2BC1B3B80267F3636F2E18 /* Pods-ZeroEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroEye.release.xcconfig"; path = "Target Support Files/Pods-ZeroEye/Pods-ZeroEye.release.xcconfig"; sourceTree = "<group>"; };
 		7C5B3E25359E353CDD3F9742 /* Pods_ZeroEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8299F75A0B08F0FC98D5DF78 /* Pods_ZeroEyeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroEyeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B8D8BE254E457400CF76BA /* Cryptograph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptograph.swift; sourceTree = "<group>"; };
+		83B8D8C3254E590C00CF76BA /* SpeechOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechOutput.swift; sourceTree = "<group>"; };
 		83DA1CA8254DD0EF00608D3D /* ZeroEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA1CAB254DD0EF00608D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DA1CAD254DD0EF00608D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		83DA1CE3254DD12A00608D3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				83B8D8BE254E457400CF76BA /* Cryptograph.swift */,
+				83B8D8C3254E590C00CF76BA /* SpeechOutput.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,7 +445,9 @@
 				83DA1CF9254DD68400608D3D /* LoginViewController.swift in Sources */,
 				83DA1CAC254DD0EF00608D3D /* AppDelegate.swift in Sources */,
 				83DA1CFE254DD6DC00608D3D /* ChatViewController.swift in Sources */,
+				83B8D8BF254E457500CF76BA /* Cryptograph.swift in Sources */,
 				83DA1D03254DEEA800608D3D /* ChatCell.swift in Sources */,
+				83B8D8C4254E590C00CF76BA /* SpeechOutput.swift in Sources */,
 				83DA1CAE254DD0EF00608D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

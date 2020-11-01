@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setFrames()
     }
     
     func loginUser() {
@@ -29,6 +30,24 @@ class LoginViewController: UIViewController {
                 print("Coudlnt log in")
             }
         }
+    }
+    
+    func setFrames() {
+        let viewFrame = self.view.frame
+        
+        self.chatLabel.frame.origin.x = (viewFrame.size.width - self.chatLabel.frame.size.width) / 2
+        self.chatLabel.frame.origin.y = (viewFrame.size.height * 0.25)
+        
+        self.usernameField.frame.origin.x = 35
+        self.usernameField.frame.origin.y = viewFrame.size.height * 0.50
+        self.usernameField.frame.size.width = viewFrame.size.width - 70
+        
+        self.passwordField.frame.origin.x = 35
+        self.passwordField.frame.origin.y = viewFrame.size.height * 0.70
+        self.passwordField.frame.size.width = viewFrame.size.width - 70
+        
+        self.loginButton.frame.origin.x = (viewFrame.size.width - self.loginButton.frame.size.width) / 2
+        self.loginButton.frame.origin.y = (viewFrame.size.height * 0.85)
     }
     
     @IBAction func onLogin(_ sender: Any) {

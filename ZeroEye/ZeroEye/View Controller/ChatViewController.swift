@@ -9,9 +9,8 @@ import UIKit
 import Parse
 import MessageInputBar
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate, SpeechDelegate {
    
-    
     @IBOutlet weak var encryptSwitch: UISwitch!
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,7 +20,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -78,6 +77,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
         cell.isEncrypted = self.encryptSwitch.isOn
+        cell.speechDelegate = self
         cell.setChatCell(message: self.messages[indexPath.row])
         return cell
     }
@@ -96,6 +96,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
+    }
+    
+    func viewPressed(cell: ChatCell, didTap: String) {
+        print("Speaking...")
+        let speechModel = SpeechOutput()
+        speechModel.say(text: didTap)
     }
     
     @IBAction func switchMoved(_ sender: Any) {

@@ -19,10 +19,20 @@ class ChatCell: UITableViewCell {
     @IBOutlet weak var authorChatLabel: UILabel!
     
     var isEncrypted: Bool?
+    var speechDelegate: SpeechDelegate?
+    var chat: [String]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let bubbleTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
+        self.bubbleView.addGestureRecognizer(bubbleTap)
+        self.bubbleView.isUserInteractionEnabled = true
+        
+        let authorTap = UILongPressGestureRecognizer.init(target: self, action: #selector(longPress(sender:)))
+        self.authorBubbleView.addGestureRecognizer(authorTap)
+        self.authorBubbleView.isUserInteractionEnabled = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,12 +41,19 @@ class ChatCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @objc func longPress(sender: UILongPressGestureRecognizer) {
+        let textData = Cryptograph.sharedInstance.decryptText(text: self.chat!)
+        speechDelegate?.viewPressed(cell: self, didTap: textData)
+    }
+    
     func setChatCell(message: PFObject) {
         self.bubbleView.layer.cornerRadius = 16
         self.bubbleView.clipsToBounds = true
         
         self.authorBubbleView.layer.cornerRadius = 26
         self.authorBubbleView.clipsToBounds = true
+        
+        self.chat = message["Chats"] as? [String]
         
         let composer = message["author"] as! PFUser
         
@@ -77,4 +94,8 @@ class ChatCell: UITableViewCell {
             self.authorChatLabel.alpha = 0
         }
     }
+}
+
+protocol SpeechDelegate {
+    func viewPressed(cell: ChatCell, didTap: String)
 }
